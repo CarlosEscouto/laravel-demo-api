@@ -12,9 +12,9 @@ use App\Http\Transformers\PostTransformer;
 class PostController extends Controller
 {
     public function mostra(Request $request, $id) {
-      dump('Carlos test');
-      dump($request->request);
-      die();
+//      dump('Carlos test');
+//      dump($request->request);
+//      die();
     }
     public function index(Request $request, PostsFilter $filters)
     {
@@ -25,7 +25,7 @@ class PostController extends Controller
 
     public function show(Post $post, PostsFilter $filter)
     {
-        dump($post);
+//        dump($post);
         $data = Post::filter($filter)->find($post->id);
 
         return new JsonApiResponse($data, new PostTransformer(), 'posts');
