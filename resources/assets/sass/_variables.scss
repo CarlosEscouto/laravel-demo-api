@@ -1,0 +1,52 @@
+// Colors
+$color-main: #465975;
+$color-main-lightest: lighten($color-main, 60%);
+$color-main-lighter: lighten($color-main, 50%);
+$color-main-light: lighten($color-main, 20%);
+$color-main-dark: darken($color-main, 20%);
+$color-main-darker: darken($color-main, 40%);
+$color-main-darkest: darken($color-main, 60%);
+
+$color-second: #e63946;
+$color-second-lightest: lighten($color-second, 60%);
+$color-second-lighter: lighten($color-second, 50%);
+$color-second-light: lighten($color-second, 20%);
+$color-second-dark: darken($color-second, 20%);
+$color-second-darker: darken($color-second, 40%);
+$color-second-darkest: darken($color-second, 60%);
+
+// Links
+$link-color: $color-main-light;
+
+// Body
+$body-bg: #f5f8fa;
+
+// Typography
+$font-family-sans-serif: "Raleway", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+$text-color: #636b6f;
+
+// Navbar
+$navbar-default-bg: #fff;
+
+// Buttons
+$btn-default-color: $text-color;
+$input-btn-focus-box-shadow:  0;
+$btn-focus-box-shadow: 0;
+
+// Panels
+$panel-default-heading-bg: #fff;
+
+// Border Radius
+$border-radius: 0 !default;
+$border-radius-lg: 0 !default;
+$border-radius-sm: 0 !default;
+
+// List Group
+$list-group-active-color: $text-color;
+$list-group-active-bg: $color-main-lightest;
+$list-group-active-border-color: $color-main-lighter;
+
+// Card
+$card-cap-bg: $color-main-lighter;

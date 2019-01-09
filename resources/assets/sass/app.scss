@@ -1,0 +1,28 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import "element-variables";
+
+button:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.cool-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+// elements ui
+
+.el-form--label-top .el-form-item__label {
+  padding: 0;
+  margin: 0;
+}
