@@ -11,11 +11,6 @@ use App\Http\Transformers\PostTransformer;
 
 class PostController extends Controller
 {
-    public function mostra(Request $request, $id) {
-//      dump('Carlos test');
-//      dump($request->request);
-//      die();
-    }
     public function index(Request $request, PostsFilter $filters)
     {
         $data = Post::filter($filters)->paginateOrGet($request);
@@ -25,7 +20,6 @@ class PostController extends Controller
 
     public function show(Post $post, PostsFilter $filter)
     {
-//        dump($post);
         $data = Post::filter($filter)->find($post->id);
 
         return new JsonApiResponse($data, new PostTransformer(), 'posts');
@@ -44,4 +38,12 @@ class PostController extends Controller
 
         return response('', 204);
     }
+
+    // public function search(Request $request, PostsFilter $filters)
+    // {   
+    //     // dump($filters);
+    //     // $data = Post::filter($filters)->paginateOrGet($request);
+
+    //     return "{data: \"tes\"}";
+    // }
 }
