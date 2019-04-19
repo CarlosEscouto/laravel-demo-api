@@ -17,9 +17,9 @@ use Illuminate\Http\Request;
 //    return $request->user();
 //});
 // Route::middleware('auth:api')->group(function () {
+    Route::apiResource('posts/search', 'PostController', ['search']);
     Route::apiResource('posts', 'PostController', ['only' => ['index', 'show', 'update', 'destroy']]);
     Route::apiResource('tags', 'TagController', ['only' => ['index', 'show']]);
 
     Route::put('posts/{post}/tags', 'PostTagController@update');
-    // Route::put('posts/search', 'PostController@search');
 // });

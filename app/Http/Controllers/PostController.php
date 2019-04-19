@@ -39,11 +39,10 @@ class PostController extends Controller
         return response('', 204);
     }
 
-    // public function search(Request $request, PostsFilter $filters)
-    // {   
-    //     // dump($filters);
-    //     // $data = Post::filter($filters)->paginateOrGet($request);
+    public function search(Request $request, PostsFilter $filters)
+    {   
+        $data = Post::filter($filters)->paginateOrGet($request);
 
-    //     return "{data: \"tes\"}";
-    // }
+        return new JsonApiResponse($data, new PostTransformer(), 'posts');
+    }
 }
